@@ -122,7 +122,7 @@
 
             var base = window.location.toString().split('#')[0];
             function replaceHash(newHash) {
-                window.location.replace(base + newHash);
+                window.location.replace(base + '#' + newHash);
             }
 
             $(document).on("ready", function(evt) {
