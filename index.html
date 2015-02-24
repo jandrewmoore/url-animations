@@ -120,8 +120,9 @@
                 return steps;
             }
 
+            var base = window.location.toString().split('#')[0];
             function replaceHash(newHash) {
-                window.location.replace(window.location.href + newHash);
+                window.location.replace(base + newHash);
             }
 
             $(document).on("ready", function(evt) {
