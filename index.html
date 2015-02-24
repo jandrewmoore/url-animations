@@ -274,9 +274,9 @@
                         }
                         var hash = window.location.hash.replace('#', '')
                         if (!(hash in loading)) {
-                            window.location.hash = ' |'
+                            replaceHash(' |');
                         } else {
-                            window.location.hash = loading[hash]
+                            replaceHash(loading[hash]);
                         }
                     },
                     shark: function(now, state) {
@@ -299,7 +299,7 @@
                             state.right = true
                         }
 
-                        window.location.hash = str
+                       replaceHash(str)
                     },
                     swim: function(now, state) {
                         var str = ''
